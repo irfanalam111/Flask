@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask website</title>
+</head>
+<body bgcolor="lightyellow">
+    <header>
+        <footer>
+            <div>
+                <h1 align="center">Top 3 Tech website</></h1>
+                <h2><a href="https://www.hackingarticles.in/burp-suite-for-pentester-hackbar/">Burp Suit</a></h2>
+                <p>Is not it a bit time consuming and a boring task to insert a new payload manually every time for a specific vulnerability and check for its response?<br>
+                    So, today in this article we will explore one of the best burp suite plugins <b>"Hack Bar"</b> which will speed up all of our manual payload insertion 
+                    tasks and will work with almost all the major vulnerabilities</p>
+            </div>
+            <div>
+                <p><h2>Table of Content</h2></p>
+                <ol type="1">
+                    <li>Introduction to Hack Bar
+                        <ul type="disk">
+                            <li>What is Hack Bar?</li>
+                            <li>Hack Bar Installation</li>
+                        </ul>
+                        
+                    </li>
+                    <li>Exploiting Vulnerabilities with hack bar
+                        <ul type="circle">
+                            <li>SQL Injection</li>
+                            <li>SQLi Login Bypass</li>
+                            <li>Cross-Site Scripting</li>
+                            <li>Local File Inclusion</li>
+                            <li>XXE Injection</li>
+                            <li>Unrestricted File Upload</li>
+                            <li>OS Command Injection</li>
+                        </ul>
+
+                    </li>
+                </ol>
+
+            </div>
+            <div>
+                <p><h2>Introduction to Hack Bar</h2></p>
+                <h3><u>What is Hack Bar?</u></></h3>
+                <p>
+                    Hackbar is a plugin designed for the penetration tester such in order to help them to <b>speed their manual testing procedures.</b> However, the hackbar are specifically built for the <b>browser extensions</b>, which contains a number of dictionaries according to the vulnerability type whether its SQL Injection, Cross-Site Scripting, or URL Redirections. This hackbar are designed somewhat similar to the <b>address bars</b> in the. <br>
+                    The Burps Hack Bar is a <b>Java-based Burpsuite Plugin</b> which helps the pen-testers to insert any payload by opting from a variety of different dropdown lists. Although it works the same as the browser hackbar, its design and implementation are totally different. <br>
+                    Scroll your mouse down and you will get to know about it.
+                </p>
+                <h3><u>Hack Bar Installation</u></h3>
+                <p>
+                    You might not find this great plugin over at the bApp store neither in the professional version or the community one. So, how will you set this up?  In order to make this Hackbar a part of our pentesting journey, we need to <b>download its</b>  <a href="https://github.com/d3vilbug/HackBar/releases/tag/1.0">jar File</a> from the <a href="https://github.com/d3vilbug/HackBar">GitHub repository</a>.
+                </p>
+                <img src="https://1.bp.blogspot.com/-jyxQ9AQpy0M/X-cQd_5WScI/AAAAAAAAsHM/rAZj8ZGRp2ATkBm51_ruvgXzpJ52cSoLQCLcBGAsYHQ/s16000/1.png" alt="image">
+                <p>
+                    As soon as the file gets downloaded, we will tune back into our burpsuite monitor and will navigate to the <b>Extensions section</b> in the <b>Extender tab</b>. There we will hit the <b>Add button</b> in order to pull the <b>“Load Burp Extension” </b>window.
+                </p>
+                <img src="https://1.bp.blogspot.com/-7hHbrXddbmE/X-cQoK0ZBAI/AAAAAAAAsHQ/2QzWFK-868sJ0jAYbeokGqd17KLsRzHQACLcBGAsYHQ/s16000/2.png" alt="image">
+                <p>
+                    Let now set the extension type to <b> “Java”</b> and opt the downloaded file. Further, we will hit <b>“Next”</b> to initiate the installation.
+                    <img src="https://1.bp.blogspot.com/-LacSQkMsHwk/X-cQxaabwyI/AAAAAAAAsHY/zGibIbEiVdULTlhWdossFV8b9ZnnAse4ACLcBGAsYHQ/s16000/4.png" alt="image">
+
+                </p>
+                <p>
+                    Once the installation ends up, we got our payload listed into the <b>“Burp Extensions”</b> section.
+                    <img src="https://1.bp.blogspot.com/-_rV-hoGwaPk/X-cQ8taJh-I/AAAAAAAAsHg/Z8i0dS9RPgEy-4QFGn31CQ8Xf2CXyPl1QCLcBGAsYHQ/s16000/5.png" alt="image">
+
+                </p>
+                <p>
+                    Let’s check that out, whether it’s working or not !! <br>
+                    Follow up at the repeater tab and make a right-click anywhere at the screen. Over with that, we can see a new option lined up as <b>“Hackbar”</b>.
+                    <img src="https://1.bp.blogspot.com/-YXckknKqKu8/X-cRKvoxc8I/AAAAAAAAsHk/l8ykUHPs2U0X2kYsHiXxeyqnGknEYnjpwCLcBGAsYHQ/s16000/7.png" alt="image">
+                </p>
+
+            </div>
+            <div>
+                <h2>Exploiting vulnerabilities with Hackbar</h2>
+                <p>
+                    Hackbar has been designed in such a way to hit a number of crucial vulnerabilities as the dictionaries within it are segregated according to the type they belong too. However, we can use this hackbar or its dictionaries wherever we wish to, whether it at the <b>Repeater tab</b> while manipulating the requests or at the <b>Proxy tab</b> during their interception. <br>
+                    So, for the time being, let explore it and exploit the vulnerabilities exits up in bWAPP & Acunetix(test.vulnweb) vulnerable applications.
+                </p>
+            </div>
+            <div>
+                <h4><u>SQL Injection</u></h4>
+                <p>
+                    SQL Injection is one of the most crucial vulnerabilities exists over the web as almost every dynamic web-application carries a database within it. Thus with this, the attacker could bypass the authentication, access, modify or delete data within a database. You can learn more about it from <a href="https://www.hackingarticles.in/beginner-guide-sql-injection-part-1/">here</a>. <br>
+                    However, the automated tools that are designed to exploit this vulnerability need some of <b>the manual detection for the injection points</b>. And up till now, we know this thing that the manual pentesting can be best done with our hackbar, so let try it out.
+                    Initiating with test.vulweb, let login inside it and check the artists within it.
+                    <img src="https://1.bp.blogspot.com/-B6-IdOPRoJk/X-cRWWB-sMI/AAAAAAAAsHs/iYOu9F4eDVk01afeeCmIY92ag36eBBkTwCLcBGAsYHQ/s16000/14.png" alt="image">
+                </p>
+            </div>
+
+        </footer>
+    </header>
+    
+</body>
+</html>
